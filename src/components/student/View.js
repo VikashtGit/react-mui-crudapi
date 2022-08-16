@@ -22,7 +22,7 @@ const View = () => {
  useEffect(() => {
   async function getStudent() {
    try {
-    const student = await axios.get(`http://localhost:3000/students/${id}`)
+    const student = await axios.get(`http://localhost:8000/students/${id}`)
     // console.log(student.data);
     setStudent(student.data);
    } catch (error) {

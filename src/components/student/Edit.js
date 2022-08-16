@@ -26,7 +26,7 @@ const Edit = () => {
  useEffect(() => {
   async function getStudent() {
    try {
-    const student = await axios.get(`http://localhost:3000/students/${id}`)
+    const student = await axios.get(`http://localhost:8000/students/${id}`)
     // console.log(student.data);
     setStudent(student.data);
    } catch (error) {
@@ -46,7 +46,7 @@ const Edit = () => {
  async function onFormSubmit(e) {
   e.preventDefault()
   try {
-   await axios.put(`http://localhost:3000/students/${id}`, student)
+   await axios.put(`http://localhost:8000/students/${id}`, student)
    history.push("/")
   } catch (error) {
    console.log("Something is Wrong");

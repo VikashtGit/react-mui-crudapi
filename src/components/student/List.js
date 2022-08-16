@@ -25,7 +25,7 @@ const List = () => {
  useEffect(() => {
   async function getAllStudent() {
    try {
-    const students = await axios.get("http://localhost:3000/students")
+    const students = await axios.get("http://localhost:8000/students")
     // console.log(students.data);
     setStudents(students.data);
    } catch (error) {
@@ -36,7 +36,7 @@ const List = () => {
  }, [])
 
  const handleDelete = async id => {
-  await axios.delete(`http://localhost:3333/students/${id}`);
+  await axios.delete(`http://localhost:8000/students/${id}`);
   var newstudent = students.filter((item) => {
    // console.log(item);
    return item.id !== id;

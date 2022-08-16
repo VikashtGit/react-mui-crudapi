@@ -32,7 +32,7 @@ const Home = () => {
  async function onFormSubmit(e) {
   e.preventDefault()
   try {
-   await axios.post(`http://localhost:3000/students`, student)
+   await axios.post(`http://localhost:8000/students`, student)
    setStatus(true);
   } catch (error) {
    console.log("Something is Wrong");
